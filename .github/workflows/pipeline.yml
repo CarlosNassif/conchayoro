@@ -1,0 +1,14 @@
+# This is a basic workflow to help you get started with Actions
+
+name: conchayoro-pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: executa comando
+        run: echo "Configuração inicial da pipeline"
