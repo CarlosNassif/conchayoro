@@ -16,7 +16,7 @@ jobs:
       - name: verification of node version
         run: node --version
   
-  hello_world_job:
+  hellojob:
     runs-on: ubuntu-lastet
     name: Example of custom action
     steps:
