@@ -1,0 +1,17 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Steps Examples
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push
+  
+jobs:
+  jobx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: configuração do node (pesquisar no marketplace...)
+        uses: actions/setup-node@v3.7.0
+      - name: verification of node version
+        run: node --version
