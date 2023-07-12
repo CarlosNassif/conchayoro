@@ -1,28 +1,27 @@
-# This is a basic workflow to help you get started with Actions
+name: steps examples
 
-name: Steps Examples
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push
-  
+
 jobs:
-  jobx:
+  marketplace:
     runs-on: ubuntu-latest
     steps:
-      - name: configuração do node (pesquisar no marketplace...)
-        uses: actions/setup-node@v3.7.0
-      - name: verification of node version
-        run: node --version  
-  hellojob:
-    runs-on: ubuntu-lastet
+      - name: Example of use of marketplace
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: shows node version configured.
+        run: node --version
+
+  hello_world_job:
+    runs-on: ubuntu-latest
     name: Example of custom action
     steps:
       - name: Checkout Actions
         uses: actions/checkout@v2
       - id: step-caller
-        uses: './.github/actions/hello'
+        uses: "./.github/actions/hello"
         with:
           the-caller: 'Myself'
       - run: echo random-number ${{ steps.step-caller.outputs.random-number }}
