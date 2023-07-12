@@ -14,8 +14,7 @@ jobs:
       - name: configuração do node (pesquisar no marketplace...)
         uses: actions/setup-node@v3.7.0
       - name: verification of node version
-        run: node --version
-  
+        run: node --version  
   hellojob:
     runs-on: ubuntu-lastet
     name: Example of custom action
@@ -23,7 +22,7 @@ jobs:
       - name: Checkout Actions
         uses: actions/checkout@v2
       - id: step-caller
-        uses: "./.github/actions/hello"
+        uses: './.github/actions/hello'
         with:
           the-caller: 'Myself'
       - run: echo random-number ${{ steps.step-caller.outputs.random-number }}
